@@ -90,4 +90,30 @@ public class CarLot {
             return null;
         }
     }
+	
+	public double getAverageMpg() {
+	 	double sum=0;
+		for (int i=0; i<inventory.size(); i++) {
+		sum= inventory.get(i)+sum;
+		 }
+	 return sum/inventory.size();
+		 
+ 	}
+ 
+ 	public double getTotalprofit() {
+		for (int i=0; i<inventory.size();i++) {
+			 if (isSold) { 
+			double profit=0;
+			profit= askingPrice-salesPrice;
+			int totalProfit=0;
+		 	totalProfit+=profit;
+			 }
+	 	return totalProfit;
+		 }
+	 
+ 	public void addCar(String id, int mileage, int mpg, double cost, double askingPrice ) {
+		 inventory.add(id, mileage, mpg, cost, askingPrice);
+	 }
+ }
+ 
 }
