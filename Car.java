@@ -70,12 +70,13 @@ public class Car {
     }
 
     public double getProfit(){
+      this.profit = this.cost - this.salePrice;
         return this.profit;
     }
     public void sellCar(double salePrice){
         this.salePrice = salePrice;
         this.isSold = true;
-        this.profit = this.salePrice - this.cost;
+       // this.profit = this.salePrice - this.cost;
     }
 
     public String toString() {
